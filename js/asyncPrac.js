@@ -42,9 +42,11 @@ async function getComments() {
   }
 }
 async function init() {
-  await getTodos();
-  await getPosts();
-  await getComments();
+  await getData(`${baseUrl}/todos`);
+  await getData(`${baseUrl}/posts`);
+  await getData(`${baseUrl}/comments`);
+  // perdaryti pagrindines funkcijas. iskelti push i cia
+
   console.log(masyvas);
 }
 init();
